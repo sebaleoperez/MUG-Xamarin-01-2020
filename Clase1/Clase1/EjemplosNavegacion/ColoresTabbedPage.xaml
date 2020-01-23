@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:paginasdenavegacion="clr-namespace:Clase1.EjemplosNavegacion"
+            x:Class="Clase1.EjemplosNavegacion.ColoresTabbedPage">
+
+    <paginasdenavegacion:Blanco IconImageSource="icon.png" Title="Blanco" />
+    <paginasdenavegacion:Gris IconImageSource="icon.png" Title="Gris" />
+    <paginasdenavegacion:Negro IconImageSource="icon.png" Title="Negro" />
+    
+</TabbedPage>
