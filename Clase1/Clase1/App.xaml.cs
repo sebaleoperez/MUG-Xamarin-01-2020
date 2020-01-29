@@ -14,7 +14,7 @@ namespace Clase1
             InitializeComponent();
 
             MenuPrincipal.Master = new MenuLateral();
-            MenuPrincipal.Detail = new Blanco();
+            MenuPrincipal.Detail = new NavigationPage(new ListadoPersonajes());
 
             MenuPrincipal.IconImageSource = "icon.png";
 
