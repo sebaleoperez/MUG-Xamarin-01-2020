@@ -17,8 +17,24 @@ namespace Clase1
             base.OnAppearing();
 
             StarWarsService service = new StarWarsService();
+            DatabaseService dbService = new DatabaseService();
 
-            listviewPersonajes.ItemsSource = await service.GetPeoplesAsync();
+            List<People> personajes = await dbService.GetPeoplesAsync();
+
+            if (personajes.Count == 0)
+            {
+                personajes = await service.GetPeoplesAsync();
+                dbService.SaveAllPeople(personajes);
+            }
+
+            listviewPersonajes.ItemsSource = personajes;
+
+
+        }
+
+        void listviewPersonajes_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        {
+            Navigation.PushAsync(new DetallePersonaje((People)e.Item));
         }
     }
 }

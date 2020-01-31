@@ -37,12 +37,6 @@ namespace Clase1.Services
         public string birth_year { get; set; }
         public string gender { get; set; }
         public string homeworld { get; set; }
-        public List<string> films { get; set; }
-        public List<string> species { get; set; }
-        public List<string> vehicles { get; set; }
-        public List<string> starships { get; set; }
-        public DateTime created { get; set; }
-        public DateTime edited { get; set; }
         public string url { get; set; }
     }
 }

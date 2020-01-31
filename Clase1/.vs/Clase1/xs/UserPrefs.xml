@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{6DA40029-F9FD-4846-B72F-9C9F51B7C33D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Clase1/Services/DatabaseService.cs">
+    <Files>
+      <File FileName="Clase1/App.xaml.cs" Line="17" Column="67" />
+      <File FileName="Clase1.Android/ShadowLabelRenderer.cs" Line="25" Column="1" />
+      <File FileName="Clase1/MainPage.xaml" Line="14" Column="15" />
+      <File FileName="Clase1/Services/DatabaseService.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Clase1" expanded="True">
+            <Node name="Clase1" expanded="True">
+              <Node name="Services" expanded="True">
+                <Node name="DatabaseService.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Clase1.Android" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Clase1.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

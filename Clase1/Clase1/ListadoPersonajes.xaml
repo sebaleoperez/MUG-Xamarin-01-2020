@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Clase1.ListadoPersonajes">
+    <ContentPage.Resources>
+        <Style x:Key="ColorVerde" TargetType="ListView">
+            <Setter Property="SeparatorColor" Value="Yellow" />
+        </Style>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
 
-        <ListView x:Name="listviewPersonajes" HasUnevenRows="True">
+        <ListView x:Name="listviewPersonajes" HasUnevenRows="True" ItemTapped="listviewPersonajes_ItemTapped" Style="{StaticResource ColorVerde}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
