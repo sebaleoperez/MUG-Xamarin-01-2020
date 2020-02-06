@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Clase1.Services;
+using Clase1.ViewModels;
 using Xamarin.Forms;
 
 namespace Clase1
@@ -16,20 +17,7 @@ namespace Clase1
         {
             base.OnAppearing();
 
-            StarWarsService service = new StarWarsService();
-            DatabaseService dbService = new DatabaseService();
-
-            List<People> personajes = await dbService.GetPeoplesAsync();
-
-            if (personajes.Count == 0)
-            {
-                personajes = await service.GetPeoplesAsync();
-                dbService.SaveAllPeople(personajes);
-            }
-
-            listviewPersonajes.ItemsSource = personajes;
-
-
+            await ((ListadoPersonajesViewModel)this.BindingContext).CargarPersonajes();
         }
 
         void listviewPersonajes_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)

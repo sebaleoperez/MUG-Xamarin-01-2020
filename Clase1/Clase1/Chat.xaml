@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Clase1.Chat"
+             xmlns:selectores="clr-namespace:Clase1.Selectores">
+    <ContentPage.Resources>
+
+        <DataTemplate x:Key="selectorEntrada">
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" BackgroundColor="LightGreen">
+                    <Label Text="{Binding Fecha}" />
+                    <Label Text="-" />
+                    <Label Text="{Binding Texto}" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+
+        <DataTemplate x:Key="selectorSalida">
+            <ViewCell>
+                <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
+                    <Label Text="{Binding Fecha}" />
+                    <Label Text="-" />
+                    <Label Text="{Binding Texto}" />
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+
+        <selectores:MensajesTemplateSelector x:Key="MiSelectorDeTemplates"
+            TemplateEntrada="{StaticResource selectorEntrada}"
+            TemplateSalida="{StaticResource selectorSalida}" />
+
+    </ContentPage.Resources>
+
+
+
+
+    <ContentPage.Content>
+
+        <ListView x:Name="lvMensajes" ItemTemplate="{StaticResource MiSelectorDeTemplates}" >
+
+        </ListView>
+
+
+    </ContentPage.Content>
+</ContentPage>

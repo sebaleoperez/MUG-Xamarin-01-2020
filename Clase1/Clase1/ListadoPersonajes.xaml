@@ -1,14 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Clase1.ListadoPersonajes">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Clase1.ListadoPersonajes"
+             Title="{Binding Titulo}" xmlns:viewmodels="clr-namespace:Clase1.ViewModels">
     <ContentPage.Resources>
         <Style x:Key="ColorVerde" TargetType="ListView">
             <Setter Property="SeparatorColor" Value="Yellow" />
         </Style>
     </ContentPage.Resources>
 
+    <ContentPage.BindingContext>
+        <viewmodels:ListadoPersonajesViewModel />
+    </ContentPage.BindingContext>
+
     <ContentPage.Content>
 
-        <ListView x:Name="listviewPersonajes" HasUnevenRows="True" ItemTapped="listviewPersonajes_ItemTapped" Style="{StaticResource ColorVerde}">
+        <StackLayout>
+
+        <Label Text="{Binding Titulo}" />
+
+        <ListView x:Name="listviewPersonajes" HasUnevenRows="True" ItemTapped="listviewPersonajes_ItemTapped" Style="{StaticResource ColorVerde}"
+                  ItemsSource="{Binding Personajes}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -17,6 +27,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        </StackLayout>
 
     </ContentPage.Content>
 </ContentPage>

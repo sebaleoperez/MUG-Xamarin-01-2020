@@ -20,5 +20,8 @@
     <Folder Include="EjemplosNavegacion\" />
     <Folder Include="Services\" />
     <Folder Include="Extensions\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Selectores\" />
   </ItemGroup>
 </Project>
